@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "../styles/Header.scss";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
+    <header>
+      <img src="../assets/KasaLOGO.png" alt="logo Kasa" />
       <nav>
-        <Link to={"/"}>Acceuil</Link>
-        <Link to={"/about-us"}>A propos</Link>
+        <NavLink to={"/"}>Acceuil</NavLink>
+        <NavLink to={"/about-us"}>A propos</NavLink>
       </nav>
-    </div>
+    </header>
   );
 };
 
