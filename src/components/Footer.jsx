@@ -1,8 +1,21 @@
+import "../styles/Footer.scss";
+import { NavLink } from "react-router-dom";
+
+
 const Footer = () => {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <footer className="footer">
+      <NavLink to="/">
+        <img
+          className="footer__logo"
+          src={require("../assets/footer LOGO.png")}
+          alt="logo du footer"
+        />
+      </NavLink>
+      <small className="footer__copyright">
+        © 2020 Kasa. All rights reserved
+      </small>
+    </footer>
   );
 };
 
