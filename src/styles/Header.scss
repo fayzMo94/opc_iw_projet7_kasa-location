@@ -1,11 +1,11 @@
 .header {
   max-width: 1240px;
   width: 100%;
-  margin: 0 auto;
+  min-height: 50px;
+  margin: 50px auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
-  // padding: 0;
+
   &__logo {
     height: 68px;
   }
@@ -54,25 +54,26 @@
 }
 
 @media (max-width: 1024px) {
-.header {
-  margin-bottom: 0;
-}
+  .header {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 640px) {
-.header {
-  padding: 0 25px;
-  &__logo {
-    height: auto;
-    img {
-      width: 145px;
+  .header {
+    padding: 0 25px;
+    margin-top: 0;
+    &__logo {
+      height: auto;
+      img {
+        width: 145px;
+      }
+    }
+    &__nav {
+      gap: 25px;
+      .navLinks {
+        font-size: 12px;
+      }
     }
   }
-  &__nav {
-    gap: 25px;
-    .navLinks {
-      font-size: 12px;
-    }
-  }
-}
 }
