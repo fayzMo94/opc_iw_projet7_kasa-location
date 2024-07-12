@@ -7,20 +7,35 @@
     margin-top: 73px;
     font-size: 288px;
     font-weight: bold;
-    color: #FF6060;
+    color: #ff6060;
     text-align: center;
   }
   &__p {
     font-size: 36px;
-    color: #FF6060;
+    color: #ff6060;
     text-align: center;
     margin-top: 3em;
     margin-bottom: 3em;
   }
   &__homeLink {
+    font-size: 18px;
     align-self: center;
     color: black;
     margin-bottom: 7em;
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .errorPg {
+    &__title {
+      font-size: 96px;
+    }
+    &__p {
+      font-size: 18px;
+    }
+    &__homeLink {
+      font-size: 14px;
+    }
   }
 }
