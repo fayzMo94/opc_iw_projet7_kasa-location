@@ -1,0 +1,11 @@
+.about {
+  max-width: 1240px;
+  margin: 0 auto;
+  &__content{
+    max-width: 1023px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

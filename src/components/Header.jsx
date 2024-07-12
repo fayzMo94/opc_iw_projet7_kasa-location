@@ -19,8 +19,9 @@ const Header = () => {
         <img src={require("../assets/KasaLOGO.png")} alt="logo Kasa" />
       </NavLink>
       <nav className="header__nav">
-        {navLinks.map((link) => (
+        {navLinks.map((link, index) => (
           <NavLink
+            key={index}
             to={link.href}
             className={({ isActive }) => {
               return "navLinks " + (isActive ? " activeLink" : "");

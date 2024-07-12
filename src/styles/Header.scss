@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  padding: 0 20px;
+  padding: 0 50px;
   &__logo {
     height: 68px;
   }
@@ -46,8 +46,32 @@
 }
 
 // DESKTOP (from 1240px onwards)
-@media (min-width: 1240px) {
+@media (min-width: 1260px) {
   .header {
     padding: 0;
   }
+}
+
+@media (max-width: 1024px) {
+.header {
+  margin-bottom: 0;
+}
+}
+
+@media (max-width: 640px) {
+.header {
+  padding: 0 25px;
+  &__logo {
+    height: auto;
+    img {
+      width: 145px;
+    }
+  }
+  &__nav {
+    gap: 25px;
+    .navLinks {
+      font-size: 12px;
+    }
+  }
+}
 }
