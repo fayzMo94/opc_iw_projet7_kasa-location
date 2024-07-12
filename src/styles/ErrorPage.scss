@@ -1,0 +1,26 @@
+.errorPg {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin-top: 73px;
+    font-size: 288px;
+    font-weight: bold;
+    color: #FF6060;
+    text-align: center;
+  }
+  &__p {
+    font-size: 36px;
+    color: #FF6060;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  &__homeLink {
+    align-self: center;
+    color: black;
+    margin-bottom: 7em;
+    text-align: center;
+  }
+}

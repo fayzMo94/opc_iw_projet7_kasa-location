@@ -41,7 +41,6 @@
 
 @media (max-width: 1024px) {
   .banner {
-    height: 111px;
     &__title {
       font-size: 24px;
     }
@@ -50,6 +49,7 @@
 
 @media (max-width: 640px) {
   .banner {
+    height: 111px;
     border-radius: 10px;
     padding: 20px;
     justify-content: flex-start;
