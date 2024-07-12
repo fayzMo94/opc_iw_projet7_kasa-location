@@ -16,3 +16,18 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 640px) {
+  .footer {
+    gap: 0.7em;
+    padding: 50px 100px;
+    &__logo {
+      margin-top: 0;
+    }
+    &__copyright {
+      font-size: 12px;
+      text-align: center;
+      padding: 0 30px;
+    }
+  }
+}

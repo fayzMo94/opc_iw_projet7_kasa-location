@@ -1,0 +1,49 @@
+.collapse {
+  &__bar {
+    background-color: #ff6060;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+    .arrow {
+      width: 24px;
+      height: 14px;
+      margin-right: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    .arrow--up {
+      transform: rotate(0deg);
+    }
+    .arrow--down {
+      transform: rotate(180deg);
+    }
+  }
+  &__content {
+    background-color: #f6f6f6;
+    padding: 20px 15px;
+    visibility: visible;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+
+    p {
+      font-size: 18px;
+    }
+  }
+  &__content--hidden {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0 15px;
+    transition: all 0.3s;
+    p {
+      opacity: 0;
+    }
+  }
+}
