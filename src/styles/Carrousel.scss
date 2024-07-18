@@ -1,0 +1,40 @@
+.carrousel {
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  background: center no-repeat;
+  background-size: cover;
+  position: relative;
+  &__sliderArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &--Left {
+      left: 30px;
+    }
+    &--Right {
+      right: 30px;
+    }
+  }
+  &__currentSlideTxt {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .carrousel {
+    height: 255px;
+    &__sliderArrow {
+      height: 24px;
+    }
+    &__currentSlideTxt--hidden {
+      visibility: hidden;
+    }
+  }
+}

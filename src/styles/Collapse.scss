@@ -1,4 +1,5 @@
 .collapse {
+  flex: 1 1 0;
   &__bar {
     background-color: #ff6060;
     border-radius: 5px;
@@ -31,9 +32,9 @@
     visibility: visible;
     height: auto;
     transition: all 0.5s ease-in-out;
-
-    p {
-      font-size: 18px;
+    font-size: 18px;
+    &--item {
+      margin-top: 5px;
     }
   }
   &__content--hidden {
@@ -44,6 +45,25 @@
     transition: all 0.3s;
     p {
       opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collapse {
+    &__bar {
+      h3 {
+        font-size: 13px;
+      }
+      .arrow {
+        width: 16px;
+        height: 10px;
+      }
+    }
+    &__content {
+      p {
+        font-size: 12px;
+      }
     }
   }
 }

@@ -8,9 +8,14 @@ const About = () => {
     <section className="about">
       <Banner />
       <main className="about__content">
-        {abtDatas.map((data) => (
-          <Collapse key={data.id} title={data.title} descr={data.description} />
-        ))}
+        {abtDatas &&
+          abtDatas.map((data) => (
+            <Collapse
+              key={data.id}
+              title={data.title}
+              descr={data.description}
+            />
+          ))}
       </main>
     </section>
   );

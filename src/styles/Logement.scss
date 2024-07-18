@@ -1,0 +1,120 @@
+.logement {
+  max-width: 1240px;
+  width: 100%;
+  flex: 1;
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    &__main {
+      h2 {
+        font-size: 36px;
+        color: #ff6060;
+        font-weight: 500;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      &-tags {
+        list-style-type: none;
+        display: flex;
+        gap: 1em;
+        margin: 1.2em 0;
+        li {
+          font-size: 14px;
+          font-weight: bold;
+          padding: 3px 2.5em;
+          background-color: #ff6060;
+          color: white;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    &__host {
+      display: flex;
+      flex-direction: column;
+
+      &-profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1em;
+        h4 {
+          width: 50%;
+          font-size: 18px;
+          color: #ff6060;
+          font-weight: 500;
+          text-align: end;
+        }
+        img {
+          width: 64px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  &__collapses {
+    display: flex;
+    gap: 76px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .logement {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logement{
+    &__infos {
+      margin-top: 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__main {
+        width: 100%;
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+          margin: 10px 0;
+        }
+        &-tags {
+          margin: 0;
+          li {
+            font-size: 10px;
+          }
+        }
+      }
+      &__host {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+        &-profile {
+          h4 {
+            font-size: 12px;
+          }
+          .host-profile-pic {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+    &__collapses {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
