@@ -1,15 +1,32 @@
 import { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-import listeLogements from "../datas/logements.json";
 import "../styles/Home.scss";
+import Loader from "../components/Loader";
 
 function Home() {
   const [logements, setLogements] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setLogements(listeLogements);
+    async function fetchDatas() {
+      setIsLoading(true);
+      try {
+        const response = await fetch("/datas/logements.json");
+        const datas = await response.json();
+        setLogements(datas);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchDatas();
   }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <main className="home">

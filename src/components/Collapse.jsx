@@ -20,7 +20,7 @@ const Collapse = ({ title, descr }) => {
           colToggle ? "collapse__content" : "collapse__content--hidden"
         }
       >
-        {descr.constructor === Array ? (
+        {descr?.constructor === Array ? (
           descr.map((desc, index) => {
             return (
               <p key={index} className="collapse__content--item">

@@ -1,9 +1,33 @@
 import Banner from "../components/Banner";
 import "../styles/About.scss";
-import abtDatas from "../datas/aboutPgDatas.json";
 import Collapse from "../components/Collapse";
+import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 const About = () => {
+  const [abtDatas, setAbtDatas] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    async function fetchAbtDatas() {
+      setIsLoading(true);
+      try {
+        const response = await fetch("/datas/aboutPgDatas.json");
+        const datas = await response.json();
+        setAbtDatas(datas);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchAbtDatas();
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <section className="about">
       <Banner />
