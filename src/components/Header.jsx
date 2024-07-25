@@ -3,7 +3,7 @@ import "../styles/Header.scss";
 
 const navLinks = [
   {
-    name: "Acceuil",
+    name: "Accueil",
     href: "/",
   },
   {
