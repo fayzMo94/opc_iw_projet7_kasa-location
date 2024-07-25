@@ -26,6 +26,9 @@
     font-weight: bold;
     color: white;
     z-index: 999;
+    &--lineBreak {
+      display: none;
+    }
   }
 }
 
@@ -58,6 +61,9 @@
     }
     &__title {
       width: 80%;
+      &--lineBreak {
+        display: block;
+      }
     }
   }
 }

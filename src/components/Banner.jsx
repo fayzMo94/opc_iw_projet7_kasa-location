@@ -17,7 +17,10 @@ const Banner = () => {
       className={abtPage ? "banner banner-bg-img2" : "banner banner-bg-img1"}
     >
       {!abtPage && (
-        <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+        <h1 className="banner__title">
+          Chez vous, <br className="banner__title--lineBreak" /> partout et
+          ailleurs
+        </h1>
       )}
     </section>
   );

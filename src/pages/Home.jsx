@@ -34,7 +34,12 @@ function Home() {
       <section className="housingsContainer">
         {logements &&
           logements.map((logement) => (
-            <Card key={logement.id} id={logement.id} title={logement.title} />
+            <Card
+              key={logement.id}
+              id={logement.id}
+              title={logement.title}
+              cover={logement.cover}
+            />
           ))}
       </section>
     </main>
